@@ -1,0 +1,35 @@
+.jumbotron {
+    background-color: #1C2833;
+    color: white;
+    text-align: center;
+}
+
+
+/* aligns contet div next to sidebar div */
+.wrapper {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.sidebar {
+    width: 25%;
+    padding: 20px;
+}
+
+.content {
+    width: 85%;
+    padding: 20px;
+}
+
+.card {
+    padding: 10px;
+}
+
+/* Blue Weather Cards  */
+.weather-info {
+    display: flex;
+    border-radius: 50px;
+
+}
+
