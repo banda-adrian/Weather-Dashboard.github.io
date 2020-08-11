@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <!-- CSS Link -->
     <link rel="stylesheet" href="styles.css">
 
     <title>Weather Dashboard</title>
@@ -32,26 +33,17 @@
 
                 <h4>Search for a City:</h4>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" aria-label="Recipient's username"
-                        aria-describedby="button-addon2">
+                    <input type="text" class="form-control" placeholder="City Name" id="city_entered">
                     <div class="input-group-append">
-                        <button class="btn btn btn-primary" type="button" id="button-addon2"></button>
+                        <button class="btn btn btn-primary" type="button" id="city_search"></button>
                     </div>
                 </div>
 
+                <!-- List of Cities searched -->
                 <div class="card-body">
                     <blockquote class="blockquote mb-0">
 
-                        <ul class="list-group">
-                            <li class="list-group-item">Austin</li>
-                            <li class="list-group-item">Chicago</li>
-                            <li class="list-group-item">New York</li>
-                            <li class="list-group-item">Orlando</li>
-                            <li class="list-group-item">San Franciso</li>
-                            <li class="list-group-item">Seattle</li>
-                            <li class="list-group-item">Denver</li>
-                            <li class="list-group-item">Atlana</li>
-                        </ul>
+                        <ul class="list-group" id="city_log"></ul>
 
                 </div>
             </div>
@@ -62,11 +54,11 @@
             <div class="card">
 
                 <div class="card-body">
-                    <h1>City/Date/Weather Icon</h1>
-                    <p>Temperature:</p>
-                    <p>Humidity:</p>
-                    <p>Wind Speed:</p>
-                    <p>UV Index: Red Box Style</p>
+                    <h1 id="city_content">City/Date/Weather Icon</h1>
+                    <p id="temp_content">Temperature:</p>
+                    <p id="humidity_content">Humidity:</p>
+                    <p id="windSpeed_content">Wind Speed:</p>
+                    <p id="uvIndex_content">UV Index: Red Box Style</p>
 
                 </div>
             </div>
@@ -78,14 +70,15 @@
                 <div class="card-deck">
                     <div class="weather-info">
                         <!-- Monday -->
-                        <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 12rem;" id="day_1">
                             <div class="card-body">
                                 <h5 class="card-title">Monday</h5>
                                 <p class="card-text">Weather Icon</p>
-                                <p class="card-text">Temp:</p>
-                                <p class="card-text">Humidity:</p>
+                                <p class="card-text" id="temp_card">Temp:</p>
+                                <p class="card-text" id="humidity_card">Humidity:</p>
                             </div>
                         </div>
+
                         <!-- Tuesday -->
                         <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
                             <div class="card-body">
@@ -95,6 +88,7 @@
                                 <p class="card-text">Humidity:</p>
                             </div>
                         </div>
+
                         <!-- Wednesday -->
                         <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
                             <div class="card-body">
@@ -104,6 +98,7 @@
                                 <p class="card-text">Humidity:</p>
                             </div>
                         </div>
+
                         <!-- Thursday -->
                         <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
                             <div class="card-body">
@@ -113,6 +108,7 @@
                                 <p class="card-text">Humidity:</p>
                             </div>
                         </div>
+
                         <!-- Friday -->
                         <div class="card text-white bg-primary mb-3" style="max-width: 12rem;">
                             <div class="card-body">
@@ -130,26 +126,10 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
-        integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
-        crossorigin="anonymous"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>
